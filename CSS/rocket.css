@@ -1,0 +1,158 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --color1: #3b93ff;
+    --color2: #b339ff;
+}
+
+body{
+    background-color: black ;
+}
+
+.background{
+    height: 400px;
+    width: 400px;
+    background-color: var(--color1);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 10px solid white;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    overflow: hidden;
+    animation: backgroundAnimation 4s infinite;
+    -webkit-animation: backgroundAnimation 4s infinite;
+}
+
+.background::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    left: 50%;
+    
+}
+
+@keyframes backgroundAnimation{
+        0%{
+            background-color: var(--color1);
+        }
+        30%{
+            background-color: var(--color2);
+        }
+        70%{
+            background-color: var(--color2);
+        }
+        100%{
+            background-color: var(--color1);
+        }
+}
+
+
+.myRocket{
+    color:white;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    font-size: 200px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    -moz-transform: translate(-50%, -50%) rotate(-45deg);
+    -ms-transform: translate(-50%, -50%) rotate(-45deg);
+    -o-transform: translate(-50%, -50%) rotate(-45deg);
+    animation: rocketAnimation 1s infinite;
+    -webkit-animation: rocketAnimation 1s infinite;
+    z-index: 100;
+}
+
+@keyframes rocketAnimation{
+    0%{
+        transform: translate(-50%, -50%) rotate(-45deg) translate(0px, 0px);
+        -webkit-transform: translate(-50%, -50%) rotate(-45deg) translate(0px, 0px);
+        -moz-transform: translate(-50%, -50%) rotate(-45deg) translate(0px, 0px);
+        -ms-transform: translate(-50%, -50%) rotate(-45deg) translate(0px, 0px);
+        -o-transform: translate(-50%, -50%) rotate(-45deg) translate(0px, 0px);
+}
+
+50%{
+    transform: translate(-50%, -50%) rotate(-45deg) translate(5px, -5px);
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg) translate(5px, -5px);
+    -moz-transform: translate(-50%, -50%) rotate(-45deg) translate(5px, -5px);
+    -ms-transform: translate(-50%, -50%) rotate(-45deg) translate(5px, -5px);
+    -o-transform: translate(-50%, -50%) rotate(-45deg) translate(5px, -5px);
+}
+
+100%{
+    transform: translate(-50%, -50%) rotate(-45deg) translate(0px, 0px);
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg) translate(0px, 0px);
+    -moz-transform: translate(-50%, -50%) rotate(-45deg) translate(0px, 0px);
+    -ms-transform: translate(-50%, -50%) rotate(-45deg) translate(0px, 0px);
+    -o-transform: translate(-50%, -50%) rotate(-45deg) translate(0px, 0px);
+}
+}
+
+.cloud{
+    position: absolute;
+    color:#ccc;
+    font-size: 100px;
+    
+    animation: animateCloud 1s infinite;
+    -webkit-animation: animateCloud 1s infinite;
+}
+
+.cloud--1{
+    font-size: 80px;
+    top:10px;
+    left:10px;
+}
+
+.cloud--2{
+    font-size: 80px;
+    top:10px;
+    left:100px;
+}
+
+.cloud--3{
+    font-size: 80px;
+    top:10px;
+    left:200px;
+}
+
+@keyframes animateCloud{
+    0%{
+        transform: translate(0%, 0%)    ;
+        -webkit-transform: translate(0%, 0%)    ;
+        -moz-transform: translate(0%, 0%)    ;
+        -ms-transform: translate(0%, 0%)    ;
+        -o-transform: translate(0%, 0%)    ;
+}
+
+50%{
+    transform: translate(500px, -500px)    ;
+    -webkit-transform: translate(500px, -500px)    ;
+    -moz-transform: translate(500px, -500px)    ;
+    -ms-transform: translate(500px, -500px)    ;
+    -o-transform: translate(500px, -500px)    ;
+}
+
+100%{
+    transform: translate(0%, 0%)    ;
+    -webkit-transform: translate(0%, 0%)    ;
+    -moz-transform: translate(0%, 0%)    ;
+    -ms-transform: translate(0%, 0%)    ;
+    -o-transform: translate(0%, 0%)    ;
+}
+}
